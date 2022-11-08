@@ -1,0 +1,9 @@
+.gradient{
+    position: absolute;
+    width: 160vw;
+    height: 300vh;
+    left: calc(50% - 160vw/2);
+    top: -278vh;
+    background: radial-gradient(50% 50% at 50% 50%, #0049FA 51.73%, rgba(8, 8, 22, 0) 100%);
+    opacity: 0.35;
+}

@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,101 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+body{
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grad{
+  position: absolute;
+  height: 120vh;
+  width: 140vw; 
+  top: -100vh;
+  left: -20vw;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(50% 50% at 50% 50%, #0049FA 0%, rgba(8, 8, 22, 0) 100%);
+  opacity: 0.20;
+}
+
+/* Tailwind CSS Directives */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+*! Extra  Styles
+ */
+ .get_free_audit_gradient{
+    z-index: -10;
+    overflow: hidden;
+ }
+
+.get_free_audit_gradient::before{
+    content: '';
+    height: 440vh;
+    width: 100vw;
+    /* background: pink; */
+    position: absolute;
+    transform: translateY(-380vh);
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, #0049FA 0%, rgba(8, 8, 22, 0) 100%);
+    opacity: 0.55;
+}
+
+.get_free_audit_gradient_mobile::before{
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    /* background: pink; */
+    position: absolute;
+    transform: translateY(-80vh);
+    border-radius: 50%;
+    background: radial-gradient(50% 50% at 50% 50%, #0049FA 0%, rgba(8, 8, 22, 0) 100%);
+    opacity: 0.55;
+}
+
+/* Active styles for the card in landing page.. */
+.card{
+  z-index: 100;
+  width: 13vw;
+  overflow: hidden;
+  transition: width .9s ease-out,border .4s ease-out;
+  /* transition: all 1s ease-out; */
+}
+.card.active{
+  width: 31vw;
+  border-left: 8px solid #0049FA;
+  /* transition: border 1s ease-out; */
+}
+
+.card-item {
+  display: none;
+}
+.card.active .card-item{
+  display: block;
+}
+.card-image{
+  margin-top: 2rem;
+  transition: margin-top .5s ease-out;
+}
+.card.active .card-image{
+  margin-top: 0rem;
+}
+
+.card-item-button{
+  margin-top: 8rem;
+  transition-delay: 2s;
+  transition: margin-top 5s ease-out; 
+}
+.card.active .card-item-button{
+  margin-top: 1.5rem;
 }
