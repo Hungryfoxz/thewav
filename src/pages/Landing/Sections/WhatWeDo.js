@@ -1,4 +1,4 @@
-import React,{useLayoutEffect,useRef, useState} from 'react';
+import React,{useLayoutEffect,useRef} from 'react';
 import ImagePerformace from '../images/whatwedo/performance_marketing.png';
 import ImageUiUx from '../images/whatwedo/ui_ux_design.png';
 import EnPreTar from '../images/whatwedo/ept.svg';
@@ -14,7 +14,7 @@ import BiteSpeed from '../images/whatwedo/Partners/bitespeed.svg'
 // Gsap animations ::
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -26,7 +26,7 @@ const WhatWeDo = () => {
     const wwdCardTwo = useRef(null)
     const wwdCardThree = useRef(null)
     
-    const cardArray = ['wwdCardOne','wwdCardTwo','wwdCardThree']
+    // const cardArray = ['wwdCardOne','wwdCardTwo','wwdCardThree']
     // const [ cardW, setCardW ] = useState('cardOne')
     const cardSelected = (e) => {
         
@@ -133,8 +133,8 @@ const WhatWeDo = () => {
         
         {/* Heading */}
         <div className='min-w-[20vw] xl:pl-2 pt-3'>
-            <h1 className='text-5xl font-medium'>What</h1>
-            <h1 className='text-5xl font-medium'>We Do</h1>
+            <h1 className='text-[2.1rem] font-medium'>What</h1>
+            <h1 className='text-[2.1rem] font-medium'>We Do</h1>
         </div>
 
         {/* ------------------------------------------------------------------------------------------------------------------------------------------------- */}
@@ -142,12 +142,12 @@ const WhatWeDo = () => {
         {/* ------------------------------------------------------------------------------------------------------------------------------------------------- */}
 
         {/* wwd  === 'What we do' */}
-        <ul className='flex flex-row box-border'>
+        <div className='flex flex-row box-border'>
    
             {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
             {/* card 1 */}
-            <li className='card active flex flex-col justify-between bg-white my-5 items-center box-border rounded-md h-[54vh] mx-[.35rem] active:border-l-[8px] border-[#0049FA]' onMouseEnter={(e)=>cardSelected(e)} id="wwdCardOne" ref={wwdCardOne}>
+            <div className={`card active flex flex-col justify-between bg-white my-5 items-center box-border rounded-md h-[54vh] mx-[.35rem] active:border-l-[8px] border-[#0049FA]`} onMouseEnter={(e)=>cardSelected(e)} id="wwdCardOne" ref={wwdCardOne}>
                 <div className='box-border'>
                   <img className='card-image' src={ImagePerformace} alt="Performance Design image" />
                 </div>
@@ -163,10 +163,10 @@ const WhatWeDo = () => {
                           <img className='ml-2 h-3' src={ArrowRight} alt="arrow_right" />
                         </div>
                 </div>
-            </li>
+            </div>
 
             {/* card 2 */}
-            <li className='card flex flex-col justify-between bg-white my-5 items-center box-border rounded-md h-[54vh] mx-[.35rem]' onMouseEnter={(e)=>cardSelected(e)} id="wwdCardTwo" ref={wwdCardTwo}>
+            <div className='card flex flex-col justify-between bg-white my-5 items-center box-border rounded-md h-[54vh] mx-[.35rem]' onMouseEnter={(e)=>cardSelected(e)} id="wwdCardTwo" ref={wwdCardTwo}>
                 <img className='card-image' src={ImageUiUx} alt="Performance Design image" />
                 <div className='flex flex-col items-start justify-start w-[100%] my-3 px-3'>
                     <h3 className='font-medium text-2xl'>UI/UX Design</h3>
@@ -176,14 +176,14 @@ const WhatWeDo = () => {
                             <p className='text-sm leading-tight text-[#5E5E5E]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu vestibulum sollicitudin nibh enim lectus id risus eros. Fames ut non in purus at.</p>
                         </div>
                         <div className='card-item-button flex flex-row mt-6 items-center'>
-                        <button className='border-none ring-0 text-[#0049FA] text-sm font-medium'>Get in Touch</button>
-                        <img className='ml-2 h-3' src={ArrowRight} alt="arrow_right" />
+                            <button className='border-none ring-0 text-[#0049FA] text-sm font-medium'>Get in Touch</button>
+                            <img className='ml-2 h-3' src={ArrowRight} alt="arrow_right" />
                         </div>
                 </div>
-            </li>
+            </div>
 
             {/* card 3 */}
-            <li className='card flex flex-col justify-between bg-white my-5 items-center box-border rounded-md h-[54vh] mx-[.35rem]' onMouseEnter={(e)=>cardSelected(e)} id="wwdCardThree" ref={wwdCardThree}>
+            <div className='card flex flex-col justify-between bg-white my-5 items-center box-border rounded-md h-[54vh] mx-[.35rem]' onMouseEnter={(e)=>cardSelected(e)} id="wwdCardThree" ref={wwdCardThree}>
                 <img className='card-image' src={ImagePerformace} alt="Performance Design image" />
                 <div className='flex flex-col items-start justify-start w-[100%] my-3 px-3'>
                     <h3 className='font-medium text-2xl'>Visual Branding</h3>
@@ -197,10 +197,10 @@ const WhatWeDo = () => {
                         <img className='ml-2 h-3' src={ArrowRight} alt="arrow_right" />
                         </div>
                 </div>
-            </li>
+            </div>
 
             {/* End of the card.... */}
-        </ul>
+        </div>
         
         </div>
 

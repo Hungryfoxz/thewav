@@ -128,7 +128,7 @@ const Footer = () => {
             {/* ======================================== */}
             <div className='flex flex-col'>
                 <a className='pb-[0.6rem] text-lg' href="#">Performance Marketing</a>
-                <a className='pb-[0.6rem] text-lg' href="#">Digital Branding</a>
+                <a className='pb-[0.6rem] text-lg' href="branding">Digital Branding</a>
                 <a className='pb-[0.6rem] text-lg' href="#">Social Media Marketing</a>
                 <a className='pb-[0.6rem] text-lg' href="#">UX/UI Design</a>
             </div>
@@ -202,14 +202,14 @@ const Footer = () => {
                 <a className='pb-[1.25rem] text-lg text-center' href="#">Home</a>
                 <a className='pb-[1.25rem] text-lg text-center' href="#">Services</a>
                 <a className='pb-[1.25rem] text-lg text-center' href="#">About Us</a>
-                <a className='pb-[1.25rem] text-lg text-center' href="#">Contact Us</a>
+                <a className='pb-[1.25rem] text-lg text-center' href="contact">Contact Us</a>
             </div>
             {/* ======================================== */}
             {/* Performance Marketing,Web Design,Branding */}
             {/* ======================================== */}
             <div className='flex flex-col items-center'>
                 <a className='pb-[1.25rem] text-lg' href="#">Performance Marketing</a>
-                <a className='pb-[1.25rem] text-lg' href="#">Digital Branding</a>
+                <a className='pb-[1.25rem] text-lg' href="branding">Digital Branding</a>
                 <a className='pb-[1.25rem] text-lg' href="#">Social Media Marketing</a>
                 <a className='pb-[1.25rem] text-lg' href="#">UX/UI Design</a>
             </div>

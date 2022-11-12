@@ -12,8 +12,10 @@ module.exports = {
     },
   },
   variants: {
-    margin: ['responsive','hover','active'],
+    hidden: ['responsive','hover','active','group','group-active'],
+    block: ['responsive','hover','active','group','group-active'],
     border: ['responsive','hover','active'],
+    accessibility: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [],
 }
