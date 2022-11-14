@@ -6,13 +6,15 @@ import Arrow02 from '../images/arrow02.svg';
 
 
 export const Hero = () => {
+
+
   return (
     <>
     {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
     {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
     {/* ........................................................... For large Screen .............................................................. */}
     {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-    <main className='bg-[#080816] h-[100vh] w-[100vw] box-border relative hidden md:block'>
+    <main className='bg-[#080816] h-[100vh]  box-border relative hidden md:block'>
         <div className={Styles.gradient}></div>
         
         {/* .......... Navbar Import  .......... */}
@@ -30,7 +32,7 @@ export const Hero = () => {
         <p className='text-base md:text-lg text-white leading-tight md:leading-normal text-center lg:px-44 xl:px-72 font-[20] md:font-light md:text-[0.95rem]'>The growth squad behind some of the world's most successful brands.If you want the best growth,you're at the right place.</p>
         </div>
 
-        {/* Button for small screen only .*/}
+        {/* Button for large screen only .*/}
         <div className='mt-[8.2rem] z-10'>
             <button className='bg-[#0049FA] text-white rounded-sm px-[2.4rem] py-4 font-normal text-[1.5rem] flex flex-row items-center justify-center'>
             Get in Touch

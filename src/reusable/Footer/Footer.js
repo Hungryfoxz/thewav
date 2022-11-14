@@ -58,11 +58,11 @@ const Footer = () => {
 
         {/* Logos (social media icons) */}
         <div className='flex flex-row justify-center pt-[7.8rem]'>
-            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Instagram} />
-            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Facebook} />
-            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Twitter} />
-            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Dribble} />
-            <img className='w-[25px] h-[36px]' src={Linkedin} />
+            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Instagram} alt="social media icons"/>
+            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Facebook} alt="social media icons"/>
+            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Twitter} alt="social media icons"/>
+            <img className='w-[25px] h-[36px] mr-[5.64rem]' src={Dribble} alt="social media icons"/>
+            <img className='w-[25px] h-[36px]' src={Linkedin} alt="social media icons"/>
         </div>
 
         {/* Horizontal line passing along the bottom */}
@@ -139,11 +139,11 @@ const Footer = () => {
 
         {/* Logos (social media icons) */}
         <div className='flex flex-row justify-center pt-[3.5rem]'>
-            <img className='w-[22px] h-[30px] mr-[5.5rem]' src={Instagram} />
-            <img className='w-[22px] h-[30px] mr-[5.5rem]' src={Facebook} />
-            <img className='w-[25px] h-[35px] mr-[5.5rem]' src={Behance} />
-            <img className='w-[22px] h-[30px] mr-[5.5rem]' src={Dribble} />
-            <img className='w-[22px] h-[30px]' src={Linkedin} />
+            <img className='w-[22px] h-[30px] mr-[5.5rem]' src={Instagram} alt="Social Media Icon"/>
+            <img className='w-[22px] h-[30px] mr-[5.5rem]' src={Facebook} alt="Social Media Icon"/>
+            <img className='w-[25px] h-[35px] mr-[5.5rem]' src={Behance} alt="Social Media Icon"/>
+            <img className='w-[22px] h-[30px] mr-[5.5rem]' src={Dribble} alt="Social Media Icon"/>
+            <img className='w-[22px] h-[30px]' src={Linkedin} alt="Social Media Icon"/>
         </div>
 
         {/* Horizontal line passing along the bottom */}
@@ -220,11 +220,11 @@ const Footer = () => {
 
         {/* Logos (social media icons) */}
         <div className='flex flex-row justify-between pt-[5rem] w-[100vw] px-[3.84rem]'>
-            <img className='w-[24px] h-[32px]' src={Instagram} />
-            <img className='w-[24px] h-[32px]' src={Facebook} />
-            <img className='w-[24px] h-[32px]' src={Behance} />
-            <img className='w-[24px] h-[32px]' src={Dribble} />
-            <img className='w-[24px] h-[32px]' src={Linkedin} />
+            <img className='w-[24px] h-[32px]' src={Instagram} alt="social Media Icons"/>
+            <img className='w-[24px] h-[32px]' src={Facebook} alt="social Media Icons"/>
+            <img className='w-[24px] h-[32px]' src={Behance} alt="social Media Icons"/>
+            <img className='w-[24px] h-[32px]' src={Dribble} alt="social Media Icons"/>
+            <img className='w-[24px] h-[32px]' src={Linkedin} alt="social Media Icons"/>
         </div>
 
         {/* Horizontal line passing along the bottom */}

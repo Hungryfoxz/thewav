@@ -51,55 +51,66 @@ const WhatWeDo = () => {
 
     // Scroll animations using gsap...
     const cardRef = useRef(null);
-    useLayoutEffect(() => {
-        const card = cardRef.current;
 
-        const animateScrollDownOne = gsap.fromTo(card.querySelector("#cardone"),{x:-1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out'})
-        const animateScrollDownTwo = gsap.fromTo(card.querySelector("#cardtwo"),{x:1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out'})
-        const animateScrollDownThree = gsap.fromTo(card.querySelector("#cardthree"),{x:-1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out'})
+    useLayoutEffect(() => {
+  
+        let ctx = gsap.context(() => {
+
+            const animateScrollDownOne = gsap.fromTo("#cardone",{x:-1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out'}).pause();
+            const animateScrollDownTwo = gsap.fromTo("#cardtwo",{x:1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out'}).pause();
+            const animateScrollDownThree = gsap.fromTo("#cardthree",{x:-1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out'}).pause();
+
+
         // Card one
         ScrollTrigger.create({
-            trigger: card.querySelector("#cardone"),
+            trigger: "#cardone",
             onEnter: () => animateScrollDownOne.restart()
             }); 
 
             ScrollTrigger.create({
-            trigger: card.querySelector("#cardone"),
+            trigger: "#cardone",
             markers: false,
             onEnterBack: () => animateScrollDownOne.restart()
             });
             
        // Card Two 
         ScrollTrigger.create({
-            trigger: card.querySelector("#cardtwo"),
+            trigger: "#cardtwo",
             onEnter: () => animateScrollDownTwo.restart()
             }); 
 
             ScrollTrigger.create({
-            trigger: card.querySelector("#cardtwo"),
+            trigger: "#cardtwo",
             markers: false,
             onEnterBack: () => animateScrollDownTwo.restart()
             }); 
 
         // Card three
         ScrollTrigger.create({
-            trigger: card.querySelector("#cardthree"),
+            trigger: "#cardthree",
             onEnter: () => animateScrollDownThree.restart()
             }); 
 
             ScrollTrigger.create({
-            trigger: card.querySelector("#cardthree"),
+            trigger: "#cardthree",
             markers: false,
             onEnterBack: () => animateScrollDownThree.restart()
             }); 
+          
+        }, cardRef); 
+        
+        return () => ctx.revert(); // cleanup
+        
+      }, []);
 
+    
 
         // Below is the scrub animation,elements are scrolled to view according to the scroll length..Looks more natural and beautiful..If you want it ,uncommnet the below line and comment the above line from 'const animateScrollDownOne'.... 
 
         // gsap.fromTo(card.querySelector("#cardone"),{x:-1400, duration: 1},{x:0,duration:1.5,ease:'Power2.out', scrollTrigger:{
         //     trigger:card.querySelector("#cardone"),
         //     end: 'bottom+500 center',
-        //     scrub:false,
+        //     scrub:2S,
         //     markers:true,
         //     toggleActions: "play none none reverse" 
         // }})
@@ -113,7 +124,7 @@ const WhatWeDo = () => {
         //     end: 'bottom+500 center',
         //     scrub:2 
         // }})
-    }, [])
+    // }, [])
     
 
 
